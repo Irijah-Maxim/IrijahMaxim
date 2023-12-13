@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Personal Website</title>
+    <link rel="icon" type="image/x-icon" href="Content/Pictures/Logo1.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/947d148dc5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<!--  HTML Content  --------------------------------------------------------------------->
+<div id="Flex">
+<div class="Flex">
+    <h1 style="text-align: center;">Some pictures I've taken</h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+                <img src="Content/Pictures/IMG20230611155838.jpg" style="width:100%">
+            </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+                <img src="Content/Pictures/IMG20230530153729.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Content/Pictures/IMG20230608163947.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <p style="padding-bottom: 40px; text-align: justify;">I’m proud that these pictures came out very well. The first one was taken 
+            in Lake Apo; the second was taken somewhere around Can-ayan; and the last 
+            one was taken at the Le Café restaurant on Narra Road. I have more pictures, 
+            but sadly, they were all different resolutions; these three were the ones 
+            that were of the same resolution.</p>
+    </div>
+</div>        
+
+
+<!-- navbar html  ---------------------------------------------------------------------->
+<div id="header">
+    <div class="navbar">
+        <nav>
+            <img src="Content/Pictures/Logo.jpg" alt="Logo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Blog.html">IT111 Blog Entries Page</a></li>
+            <li><a href="Flex.html" class="active">Flex Page</a></li>
+        </nav>
+    </div>
+</div>
+
+<!--  HTML Content Continuation -------------------------------------------------------->
+<div id="Flex">
+    <div class="Flex">
+        <h1 style="text-align: center;">A Proud Member of the BukSU-ROTC Unit</h1>
+        <section>
+        <div class="ROTCImg">
+            <li><a href="https://www.facebook.com/BukSUROTCU"><img src="Content/Pictures/Rotc1.jpg"></a></li>
+            <li><a href="https://www.facebook.com/BukSUROTCU"><img src="Content/Pictures/Rotc2.jpg"></a></li>
+            <li><a href="https://www.facebook.com/BukSUROTCU"><img src="Content/Pictures/rotc3.jpg"></a></li>
+        </div>
+
+        <div>
+            <p style="text-align: justify;">My time in the ROTC unit has been well spent. In the unit, we are taught 
+                how to be disciplined and respectful. We are taught about AFP history, 
+                hierarchy, their code, the <span style="color: goldenrod;">Military Professonalism Oath</span>, the <span style="color: goldenrod;">Pledge of 
+                Loyalty</span>, and the <span style="color: goldenrod;">Standards of Conduct of a Soldier</span>. We are also taught to 
+                find value in ourselves and the dangers we will encounter in the military, 
+                as well as basic life support. Here we also do physical activities, which 
+                currently mostly consist of drilling and following commands. The ROTC, while 
+                a non-mentally taxing NSTP course, puts great emphasis on discipline and 
+                compliance. Even if the sun is up high, even if the ground we stand on is wet, 
+                even if the air is cold, if we are told to drill, we will comply. It definitely 
+                helped me to feel less discontented about “questionable” situations and surroundings; 
+                it also helped a lot that the officers were reasonable people and would take into 
+                account the limits and complications of some cadets.</p>
+        </div>
+        </section>
+    </div>
+    <div class="lastdiv"></div>
+</div>
+    
+
+
+<!-- Javascript slideshow syntax (w3schools)  ---------------------------------------------------->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+<!--  Footer  --------------------------------------------------------------------------->
+<Footer>
+    <div class="Foot">
+        <div class="Footpic">
+        <a href="https://buksu.edu.ph/cot/"><img src="Content/Pictures/BuksuCOT Logo.png" alt="COT_Logo" class="img1"></a>
+        </div>
+        <div class="Foottext">
+        <a href="https://www.w3schools.com/">Ver.1.0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created with the help of <span class="green">W3schools</span>.</a>
+        </div>
+        <div class="Footpic">
+        <a href="https://buksu.edu.ph/"><img src="Content/Pictures/Buksu Logo.png" alt="Buksu_Logo" class="img2"></a>
+        </div>
+    </div>
+</Footer>
+</body>
+</html>
